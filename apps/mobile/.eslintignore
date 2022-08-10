@@ -1,0 +1,11 @@
+# don't ever lint node_modules
+build
+dist
+node_modules
+
+generated
+
+.eslintrc.js
+.prettierrc
+jest.config.js
+

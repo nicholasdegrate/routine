@@ -1,0 +1,36 @@
+{
+  "name": "routine",
+  "version": "1.0.0",
+  "description": "routine app to manage your life",
+  "author": "Nicholas Degrate",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "common/*"
+  ],
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,md,css,scss}": [
+      "prettier --write ."
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "concurrently": "^7.3.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.4.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.5",
+    "nodemon": "^2.0.19",
+    "typescript": "^4.7.4"
+  }
+}
