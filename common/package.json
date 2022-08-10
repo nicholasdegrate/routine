@@ -1,7 +1,20 @@
 {
-  "name": "common",
+  "name": "@life/common",
   "version": "1.0.0",
-  "main": "index.js",
+  "browser": "./src/browser.ts",
+  "main": "./build/index.js",
   "types": "./src/index.ts",
-  "license": "MIT"
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "check-types": "tsc --noEmit",
+    "eslint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "eslint:fix": "eslint --fix ./src --ext .js,.jsx,.ts,.tsx",
+    "lint": "run-s check-types eslint prettier:check",
+    "lint:write": "run-s check-types eslint:fix prettier:write",
+    "prettier:check": "prettier --write ./src",
+    "prettier:write": "prettier --write ./src",
+    "jest": "jest --passWithNoTests",
+    "test": "run-s lint jest"
+  }
 }

@@ -1,5 +1,5 @@
 const path = require("path");
-const baseConfig = require("../.eslintrc");
+const baseConfig = require("../../.eslintrc");
 
 module.exports = {
   ...baseConfig,

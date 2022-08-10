@@ -1,12 +1,12 @@
 {
-  "extends": "../tsconfig.base.json",
-  "compilerOptions": {
-    "composite": true,
-    "declaration": true,
-    "declarationMap": true,
-    "rootDir": "./src",
-    "outDir": "./build"
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "dist"]
+	"extends": "../tsconfig.base.json",
+	"compilerOptions": {
+		"composite": true,
+		"declaration": true,
+		"declarationMap": true,
+		"rootDir": "./src",
+		"outDir": "./build"
+	},
+	"include": ["src/**/*", "index.ts"],
+	"exclude": ["node_modules", "build", "dist"]
 }
